@@ -1,6 +1,6 @@
 #include <iostream>
 #include <windows.h>
-// ï¿½eby nie pamiï¿½taï¿½ komend cmd
+// ¿eby nie pamiêtaæ komend cmd
 using namespace std;
 
 int main()
@@ -14,7 +14,7 @@ int main()
 	{
 		cin>>komenda;
 		if(komenda=="ustaw"){
-			cout<<"\nPodaj iloï¿½ï¿½ godzin w uï¿½amku dziesiï¿½tnym za ile ma nastï¿½piï¿½ zamkniï¿½cie systemu\n";
+			cout<<"\nPodaj iloœæ godzin w u³amku dziesiêtnym za ile ma nast¹piæ zamkniêcie systemu\n";
 			cin>>liczba;
 			liczba*=3600;
 			int licz=(int)liczba;
@@ -30,7 +30,7 @@ int main()
 			koniec=!koniec;
 		}
 		else if(komenda=="pomoc"){
-			cout<<"ustaw - ustawianie czasowego wyï¿½ï¿½czenia komputera\nanuluj - przerwanie zaplanowanego wyï¿½ï¿½czenia komputera\nwyjdz - zamyka program\n";
+			cout<<"ustaw - ustawianie czasowego wy³¹czenia komputera\nanuluj - przerwanie zaplanowanego wy³¹czenia komputera\nwyjdz - zamyka program\n";
 		}
 	}while(!koniec);	
 }
