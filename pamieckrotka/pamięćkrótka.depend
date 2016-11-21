@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1446026454 source:d:\projekty\pamiêækrótka\main.cpp
+	"Pamieckrotka.h"
+
+1446198921 d:\projekty\pamiêækrótka\include\pamieckrotka.h
+	<iostream>
+	<windows.h>
+	<conio.h>
+	<cstdlib>
+	<time.h>
+
+1446199366 source:d:\projekty\pamiêækrótka\src\pamieckrotka.cpp
+	"Pamieckrotka.h"
+
