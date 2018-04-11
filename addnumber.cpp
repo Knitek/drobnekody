@@ -21,7 +21,15 @@ int main()
   for(int i=0;i<liczba;i++)
   {
       sf::RenderTexture renderTexture;
-      
+	  if(i<10)
+	  {
+		  text.setString("#0"+std::to_string(i));
+	  }
+      text.
       renderTexture.draw(text);
+	  sf::Image tmpImage = renderTexture.getTexture().ToImage();
+	  sf::Image cpopybase = image;
+	  copybase.copy(tmpImage,20,600);
+	  
   }
   }
