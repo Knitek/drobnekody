@@ -1,27 +1,41 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-class config
+class Config
 {
  public:
-    std::string inputpath;
-    int liczba;
-    std::string fontpath;
-    int charaktersize;
+    	std::string inputpath;
+  	std::string fontpath;
+	
+  	int charaktersize;
+	int liczba;
+	Config();
+	Config(std::string configpath);
+	void loadConfig(std::string path);
 };
-
+Config::Config(std::string configpath)
+{
+	loadConfig(configpath);
+}
+void Config::loadConfig(std::string path);
+{
+	fstream file;
+	file.open(path,std::ios::in);
+	file>>inputpath;
+	file>>fontpath;
+	file>>liczba;
+	file>>charaktersize;
+	file.close();
+}
 
 int main()
 {
-  std::string path;
-//  std::cin>>path;
-  int liczba = 5;
-  std::cin>>liczba;
+  Config config("config.cfg");
   sf::Image imageBase;
-  imageBase.loadFromFile("input.png");
+  imageBase.loadFromFile(config.inputpath);
 
   sf::Font font;
-  font.loadFromFile("arial.ttf");
+  font.loadFromFile(config.fontpath);
   // Create a text
   sf::Text text("#", font);
   text.setCharacterSize(150);
@@ -42,7 +56,7 @@ int main()
 		text.setString("#"+std::to_string(i));
 	  }
 
-
+	
         renderTexture.draw(text);
         sf::Image tmp = renderTexture.getTexture().copyToImage();
         tmp.flipVertically();
